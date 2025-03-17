@@ -34,17 +34,34 @@ function App() {
 
   const dissabte = new Date(avui - (avui.getDay() + 1) * 24 * 3600 * 1000);
 
+  const dateString = dissabte.toLocaleDateString("ca-ES", {
+    day: "numeric",
+    month: "long",
+  });
+
+  const copiaEncarrecs = () => {
+    const output = [];
+
+    output.push(`✅ Encàrrecs del 📆 dissabte ${dateString}`);
+
+    output.push("");
+
+    output.push(
+      ...nomEncarrecs.map(
+        (nom, index) =>
+          `${nom}: ${nomsComplets[encarrecs[index][numeroSemana]]}
+          `
+      )
+    );
+
+    navigator.clipboard.writeText(output.join("\n"));
+  };
+
   return (
     <>
       <h2>✅ Encàrrecs</h2>
 
-      <h3>
-        📆 dissabte{" "}
-        {dissabte.toLocaleDateString("ca-ES", {
-          day: "numeric",
-          month: "long",
-        })}
-      </h3>
+      <h3>📆 dissabte {dateString}</h3>
 
       <ul>
         {nomEncarrecs.map((e, i) => (
@@ -69,6 +86,12 @@ function App() {
           onClick={() => setCount((count) => count + 1)}
         >
           ➡️
+        </button>
+      </div>
+
+      <div>
+        <button className="copia-button" onClick={copiaEncarrecs}>
+          📋 Copia al portaretalls
         </button>
       </div>
       <PWABadge />

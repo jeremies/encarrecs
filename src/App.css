@@ -12,4 +12,18 @@
 .arrows {
   padding: 1rem;
   font-size: 1.5rem;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.copia-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  cursor: pointer;
 }
