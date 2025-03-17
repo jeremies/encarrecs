@@ -4,3 +4,12 @@
   padding: 2rem;
   text-align: center;
 }
+
+.list-item {
+  text-align: left;
+}
+
+.arrows {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
