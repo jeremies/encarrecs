@@ -14,8 +14,8 @@ const nomsComplets = {
 };
 
 const nomEncarrecs = [
-  "🚾 WC 0 + corredor",
-  "🚾 WC 1 + corredor",
+  "🚾 WC 0 + passadís",
+  "🚾 WC 1 + passadís",
   "♻️ Basures",
   "💩 Excrements gos",
   "🌲 Terrassa + 🪜 escales",
