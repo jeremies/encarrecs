@@ -32,7 +32,9 @@ function App() {
   const numeroSemana = Math.floor(diesTranscorreguts / 7) % 60;
   console.log(numeroSemana);
 
-  const dissabte = new Date(avui - (avui.getDay() + 1) * 24 * 3600 * 1000);
+  const dissabte = new Date(
+    avui - ((avui.getDay() + 1) % 7) * 24 * 3600 * 1000
+  );
 
   const dateString = dissabte.toLocaleDateString("ca-ES", {
     day: "numeric",
